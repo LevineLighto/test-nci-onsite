@@ -1,0 +1,1 @@
+export { SearchBarang } from "./components"
