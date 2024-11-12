@@ -21,8 +21,8 @@ class Customer extends BaseModel
     {
         if (!empty($request->search)) {
             $query->where(function (Builder $query) use ($request) {
-                $query->orWhere('kode_customer', 'ILIKE', $request->search);
-                $query->orWhere('nama_customer', 'ILIKE', $request->search);
+                $query->orWhere('kode_customer', 'ILIKE', "%{$request->search}%");
+                $query->orWhere('nama_customer', 'ILIKE', "%{$request->search}%");
             });
         }
 

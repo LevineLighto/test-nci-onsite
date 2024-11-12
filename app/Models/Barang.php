@@ -21,8 +21,8 @@ class Barang extends BaseModel
     {
         if (!empty($request->search)) {
             $query->where(function (Builder $query) use ($request) {
-                $query->orWhere('kode_barang', 'ILIKE', $request->search);
-                $query->orWhere('nama_barang', 'ILIKE', $request->search);
+                $query->orWhere('kode_barang', 'ILIKE', "%{$request->search}%");
+                $query->orWhere('nama_barang', 'ILIKE', "%{$request->search}%");
             });
         }
 
