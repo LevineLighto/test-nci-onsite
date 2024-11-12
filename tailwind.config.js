@@ -1,19 +1,31 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
+import { IrimoldTailwindContent, IrimoldTailwindPreset } from '@irimold/react-component/tailwindcss-config';
 
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/**/*.blade.php',
-        './resources/**/*.js',
-        './resources/**/*.vue',
+        "./resources/js/**/*.ts",
+        "./resources/js/**/*.tsx",
+        "./resources/views/**/*.blade.php",
+    ],
+    presets: [
+        IrimoldTailwindPreset,
     ],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+            colors: {
+                primary: {
+                    DEFAULT: '#1F9C48',
+                    100: '#D4FAD1',
+                    200: '#A6F5A9',
+                    300: '#74E183',
+                    400: '#4EC369',
+                    500: '#1F9C48',
+                    600: '#168646',
+                    700: '#0F7042',
+                    800: '#095A3C',
+                    900: '#054A37',
+                }
+            }
         },
     },
     plugins: [],
