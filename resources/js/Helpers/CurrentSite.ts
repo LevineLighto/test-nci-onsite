@@ -1,0 +1,1 @@
+export const CurrentSite = () : string => window.location.href
