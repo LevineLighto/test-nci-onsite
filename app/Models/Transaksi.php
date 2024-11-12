@@ -10,7 +10,6 @@ class Transaksi extends BaseModel
     protected $table = 'transaksi';
 
     protected $primaryKey = ['no_transaksi', 'tgl_transaksi'];
-    protected $incrementing = false;
 
 
     /** --- Scopes --- */

@@ -10,7 +10,6 @@ class Customer extends BaseModel
     protected $table = 'customer';
 
     protected $primaryKey = 'kode_customer';
-    protected $incrementing = false;
 
 
     /** --- Scopes --- */

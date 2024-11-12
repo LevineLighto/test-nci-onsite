@@ -4,15 +4,15 @@ namespace App\Http\Controllers\Api;
 
 use App\Helpers\Pagination;
 use App\Http\Controllers\Controller;
-use App\Models\Customer;
+use App\Models\Barang;
 use App\Responses\Success;
 use Illuminate\Http\Request;
 
-class CustomerController extends Controller
+class BarangController extends Controller
 {
     public function get(Request $request)
     {
-        $query = Customer::query();
+        $query = Barang::query();
 
         $query->filter($request);
 
@@ -22,8 +22,8 @@ class CustomerController extends Controller
         ] = Pagination::processRequest($query, $request);
 
 
-        $customers = $query->get();
+        $barang = $query->get();
 
-        return Success::fetch($customers, $max_page);
+        return Success::fetch($barang, $max_page);
     }
 }

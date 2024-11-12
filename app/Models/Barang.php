@@ -10,7 +10,6 @@ class Barang extends BaseModel
     protected $table = 'barang';
 
     protected $primaryKey = 'kode_barang';
-    protected $incrementing = false;
 
 
     /** --- Scopes --- */

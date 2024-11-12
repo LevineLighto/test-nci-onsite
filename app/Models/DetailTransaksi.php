@@ -10,7 +10,6 @@ class DetailTransaksi extends BaseModel
     protected $table = 'detail_transaksi';
 
     protected $primaryKey = ['no_transaksi', 'tgl_transaksi', 'kode_barang', 'urut'];
-    protected $incrementing = false;
 
 
     /** --- Scopes --- */
