@@ -7,7 +7,6 @@
     {{-- <link href="/images/logo.png" rel="icon"/> --}}
     <meta name="robots" content="noindex"/>
 
-    @routes
     @viteReactRefresh
     @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
     @inertiaHead
