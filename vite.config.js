@@ -13,6 +13,9 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
+            "@/Barang" : path.resolve(__dirname, './resources/js/Modules/Barang/'),
+            "@/Customer" : path.resolve(__dirname, './resources/js/Modules/Customer/'),
+            "@/Transaksi" : path.resolve(__dirname, './resources/js/Modules/Transaksi/'),
             "@" : path.resolve(__dirname, './resources/js/'),
         }
     }

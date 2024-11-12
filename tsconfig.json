@@ -14,6 +14,9 @@
         "strict": true,
         "noImplicitAny": false,
         "paths": {
+            "@/Barang/*"    : [ "./resources/js/Modules/Barang/*" ],
+            "@/Customer/*"  : [ "./resources/js/Modules/Customer/*" ],
+            "@/Transaksi/*" : [ "./resources/js/Modules/Transaksi/*" ],
             "@/*"           : [ "./resources/js/*" ]
         }
     },
