@@ -23,7 +23,7 @@ class Success
 
     public static function create(mixed $data = null)
     {
-        return static::parse('Data successfully created', $data);
+        return static::parse('Data berhasil disimpan', $data);
     }
 
     public static function update(mixed $data = null)

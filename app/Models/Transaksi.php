@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,15 @@ class Transaksi extends BaseModel
     protected $table = 'transaksi';
 
     protected $primaryKey = ['no_transaksi', 'tgl_transaksi'];
+
+    protected $fillable = [
+        'no_transaksi',
+        'tgl_transaksi',
+        'kode_customer',
+        'total',
+        'keterangan',
+        'bayar'
+    ];
 
 
     /** --- Scopes --- */
@@ -24,11 +34,8 @@ class Transaksi extends BaseModel
         }
 
         if (!empty($request->tgl_transaksi)) {
-            $query->where('tgl_transaksi', $request->tgl_transaksi);
-        }
-
-        if (!empty($request->kode_barang)) {
-            $query->where('kode_barang', $request->tgl_transaksi);
+            $date = Carbon::createFromFormat('d F Y H:i', $request->tgl_transaksi);
+            $query->where('tgl_transaksi', $date);
         }
 
         return $query;
