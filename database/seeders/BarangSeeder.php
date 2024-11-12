@@ -29,7 +29,7 @@ class BarangSeeder extends Seeder
                 'kode_barang'   => "{$code}{$paddedNumber}",
                 'nama_barang'   => $name,
                 'stok'          => rand(0, 1000),
-                'harga'         => rand(100000, 1000000)
+                'harga'         => rand(1, 1000) * 1000
             ];
         }
 
