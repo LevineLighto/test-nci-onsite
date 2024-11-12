@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('transaksi', function (Blueprint $table) {
-            $table->string('no_transaksi', 10);
+            $table->string('no_transaksi', 10)->unique();
             $table->dateTime('tgl_transaksi');
             $table->string('kode_customer', 5)->nullable();
             $table->decimal('total', 10, 2)->nullable();

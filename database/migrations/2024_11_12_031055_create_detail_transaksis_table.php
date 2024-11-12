@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('harga', 10, 2)->nullable();
 
             $table->primary(['no_transaksi', 'tgl_transaksi', 'kode_barang', 'urut']);
-            $table->foreign(['no_transaksi', 'tgl_transaksi'])->references(['no_transaksi', 'tgl_transaksi'])
+            $table->foreign('no_transaksi')->references('no_transaksi')
                 ->on('transaksi');
             $table->foreign(['kode_barang'])->references('kode_barang')
                 ->on('barang');
